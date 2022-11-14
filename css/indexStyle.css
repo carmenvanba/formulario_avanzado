@@ -1,16 +1,16 @@
-body{
-    background: rgb(0,0,0);
-    background: linear-gradient(318deg, rgba(0,0,0,1) 0%, rgba(54,38,79,1) 71%, rgba(81,30,159,1) 100%);
-}
-
 /* Titles and texts */
-h1{
+h2{
     text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
 }
 
+header{
+    background: black;
+}
 /* Button Plans */
 a:link, a:visited {
-    background-color: #f44336;
+    background-color: var(--myPurpleShadow);
     color: white;
     padding: 14px 25px;
     text-align: center;
@@ -19,12 +19,12 @@ a:link, a:visited {
   }
   
   a:hover, a:active {
-    background-color: red;
+    background-color: var(--myPurple);
   }
 
 
   /* Columns Plans */
-  /* Create three equal columns that floats next to each other */
+  /* Three equal columns */
 .plans{
     margin-left: auto;
 	margin-right: auto;
@@ -36,11 +36,52 @@ a:link, a:visited {
     padding: 10px;
     margin-left: 1%;
     margin-right: 1%;
+    background-color: white;
+    color: black;
   }
-  
+  #columnTitle1{
+    background-color: rgb(243, 166, 35);;
+  }
+  #columnTitle2{
+    background-color: rgb(228, 7, 18);;
+  }
+  #columnTitle3{
+    background-color: var(--myPurple);
+  }
+
+  /* Columns Content */
+  /* Create two equal columns that floats next to each other */
+.containerPlans{
+    display: flex;
+    justify-content: center;
+} 
+.columnContent {
+    float: left;
+    width: 40%;
+    padding: 10px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+
 /* Clear floats after the columns */
     .row:after {
     content: "";
     display: table;
     clear: both;
 }
+
+/* Images */
+#character{
+    width: 10%;
+}
+
+#header{
+    width: 100%;
+}
+
+#imgContent{
+ width: 100%;
+}
+#imgContent:hover {
+    opacity: 10%;
+  }

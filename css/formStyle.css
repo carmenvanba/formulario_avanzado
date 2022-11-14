@@ -1,0 +1,17 @@
+/* Color variables */
+:root {
+	--myPurple: #511e9f;
+	--myPurpleShadow: #36264f;
+}
+/* Images */
+#lineLevels{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formulary{
+    background-color: var(--myPurpleShadow);
+    width: 50%;
+}
