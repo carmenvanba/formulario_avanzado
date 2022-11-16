@@ -29,7 +29,65 @@
 
         <div class="formulary">
             <span id="step1" class="steps" >
-                <form action="/action_page.php" class="step1">
+                <div class="signupSection">
+                    <div class="info">
+                        <h2>Mission to Deep Space</h2>
+                        <img id="imageForm" src="../images/amogus01.png">  
+                        <p>The Future Is Here</p>
+                    </div>
+                    <form action="#" method="POST" class="step1" name="step1">
+                        <h2>Sign Up</h2>
+                        <ul class="noBullet">
+                            <li>
+                                <label for="username"></label>
+                                <input type="text" class="inputFields" id="username" name="username" placeholder="Name" value="" oninput="return userNameValidation(this.value)" required/>
+                            </li>
+                            <li>
+                                <label for="password"></label>
+                                <input type="password" class="inputFields" id="password" name="password" placeholder="Password" value="" oninput="return passwordValidation(this.value)" required/>
+                            </li>
+                            <li>
+                                <label for="email"></label>
+                                <input type="email" class="inputFields" id="email" name="email" placeholder="Email" value="" required/>
+                            </li>
+                            <li id="center-btn">
+                                <input type="submit" id="join-btn" name="join" alt="Join" value="Join">
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+
+
+
+
+                <!--
+                <div class="center">
+                    <h2>AW</h2>
+                    <form action="formulary.html" class="step1">
+                        <div class="inputbox">
+                            <input type="text" required="required">
+                            <span>Email</span>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" required="required">
+                            <span>Password</span>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" required="required">
+                            <span>FNAME</span>
+                        </div>
+                            <div class="inputbox">
+                           
+                        </div>
+                    </form>
+                </div>
+            -->
+            </span>
+
+
+
+<!--
+ <input type="button" onclick="step1Validation()" value="siguiente">
                     <label for="fname">Nombre:</label><br>
                     <input type="text" id="fname" name="fname"><br>
                     <label for="lname">Apellido:</label><br>
@@ -72,9 +130,10 @@
                     <input type="submit" value="Submit">
                 </form> 
             </span>
+            -->
         </div>
         
 <!--JS Code-->
-    <script src="../js/script.js"></script>
+    <script src="../js/validationScript.js"></script>
     </body>
 </html>
