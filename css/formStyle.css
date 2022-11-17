@@ -7,13 +7,13 @@
 
 /* Images */
 #imageForm{
-    width: 50%;
-    height: 70%;
+    width: 100%;
+    height: 100%;
 }
 
 /* Formulary */
 .formulary {
-  background: url(../images/amogus02.png);
+  background: url(../images/galactic.png);
   background-repeat: no-repeat;
   position: absolute;
   top: 50%;
@@ -29,11 +29,9 @@
 .leftForm {
   width: 45%;
   background: #0F1011;
-  padding: 30px 0;
   border-right: 5px solid var(--myPurple);
 }
 h2 {
-    padding-top: 30px;
     font-weight: 300;
 }
 p {
@@ -75,5 +73,19 @@ p {
 }
 .nextButton:hover {
     padding: 10px 80px;
-    background: linear-gradient(45deg, greenyellow, dodgerblue);
+    background: linear-gradient(45deg, rgba(118, 6, 133, 0.685), rgba(64, 21, 92, 0.856));
+}
+
+
+
+/* Show Password Button*/
+.showPassword {
+  margin-left: -30px; 
+  cursor: pointer;
+}
+.eyeImage{
+  width: 5%;
+}
+.eyeImage:hover {
+  opacity: 20%;
 }

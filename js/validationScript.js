@@ -45,6 +45,7 @@ function userLastNameValidation(userLastNameInput) {
 function passwordValidation(passwordInput) {
     var password = document.getElementById("password");
     var issueArr = [];
+    console.log("pass");
     if(document.getElementById("password").value.length==0){
         password.style.borderColor = alertRedInput;
     }else{
@@ -69,3 +70,54 @@ function passwordValidation(passwordInput) {
         }//Fin Si
     }//Fin Si
 }//Fin Password Validation
+
+//Repeat Password Validation
+//A CORREGIR
+function repeatPasswordValidation(repeatPasswordInput) {
+    var repeatPassword = document.getElementById("repeatPassword");
+    var issueArr = [];
+    if(document.getElementById("repeatPassword").value.length==0){
+        repeatPassword.style.borderColor = alertRedInput;
+    }else{
+        if (repeatPasswordInput != document.getElementById("password")) {
+            issueArr.push("Las contraseñas deben ser iguales.");
+        }//Fin Si
+        if (issueArr.length > 0) {
+            repeatPassword.setCustomValidity(issueArr.join("\n"));
+            repeatPassword.style.borderColor = alertRedInput;
+        } else {
+            repeatPassword.setCustomValidity("");
+            repeatPassword.style.borderColor = defaultInput;
+        }//Fin Si
+    }//Fin Si
+}// Fin Repeat Password Validation
+
+//Email Validation
+function emailValidation(emailInput) {
+    var email = document.getElementById("email");
+    var issueArr = [];
+    if(document.getElementById("email").value.length==0){
+        email.style.borderColor = alertRedInput;
+    }else{
+        if(!(/[\w\.-]+@[\w\.-]+\.\w{2,4}/.test(emailInput))){
+            issueArr.push("La dirección de correo electrónico debe cumplir el siguiente formato: ejemplo@email.com");
+        }//Fin Si
+        if (issueArr.length > 0) {
+            email.setCustomValidity(issueArr.join("\n"));
+            email.style.borderColor = alertRedInput;
+        } else {
+            email.setCustomValidity("");
+            email.style.borderColor = defaultInput;
+        }//Fin Si
+    }//Fin Si
+}//Fin Email Validation
+
+//Show Password
+function showPassword() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }//Fin Si
+  }//FinShow Password
