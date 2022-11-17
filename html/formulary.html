@@ -69,7 +69,7 @@
                                     oninput="return emailValidation(this.value)" required/>
                         </li>
                         <li id="centerButton">
-                            <input type="submit" class="nextButton" name="nextButton" alt="Continuar" value="Continuar">
+                            <input type="submit" class="nextButton" name="nextButton" alt="Continuar" value="Continuar" onclick="next()">
                         </li>
                     </ul>
                 </form>
@@ -77,15 +77,95 @@
         </span>
 
         <span id="step2" >
-            
+            <div class="formulary">
+                <div class="leftForm">
+                    <img id="imageForm" src="../images/academy.png">  
+                </div>
+
+                <form action="#" method="POST" class="rightForm">
+                    <h2>Datos</h2>
+                    <ul class="fieldsList">
+                        <li>
+                            <label for="telNumber"></label>
+                                <input type="number" class="inputFields" id="telNumber" name="telNumber" placeholder="Teléfono" value="" 
+                                    oninput="" required/>
+                        </li>
+                        <li>
+                            <label for="country"></label>
+                                <input type="text" class="inputFields" id="country" name="country" placeholder="País" value="" 
+                                    oninput="" required/>
+                        </li>
+                        <li>
+                            <label for="city"></label>
+                                <input type="text" class="inputFields" id="city" name="city" placeholder="Ciudad" value="" 
+                                    oninput="" required/>
+                        </li>
+                        <li>
+                            <label for="adress"></label>
+                                <input type="text" class="inputFields" id="adress" name="adress" placeholder="Dirección" value="" 
+                                    oninput="" required/>
+                        </li>
+
+
+                        <li id="centerButton">
+                            <input type="submit" class="nextButton" name="nextButton" alt="Continuar" value="Continuar">
+                        </li>
+                    </ul>
+                </form>
+            </div>
         </span>
-        <span id="step3" ></span>
-        <span id="step4" ></span>
+
+
+        
+        <span id="step3" >
+            <div class="formulary">
+                <div class="leftForm">
+                    <img id="imageForm" src="../images/spelljammer.png">  
+                </div>
+
+                <form action="#" method="POST" class="rightForm">
+                    <h2>Perfil de usuario</h2>
+                    <ul class="fieldsList">
+                        <li>
+                            <label for="nickName"></label>
+                                <input type="number" class="inputFields" id="nickName" name="nickName" placeholder="Alias" value="" 
+                                    oninput="" required/>
+                        </li>
+                        <li id="centerButton">
+                            <input type="submit" class="nextButton" name="nextButton" alt="Continuar" value="Continuar">
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </span>
+
+
+        <span id="step4" >
+            <div class="formulary">
+                <div class="leftForm">
+                    <img id="imageForm" src="../images/tasha.png">  
+                </div>
+
+                <form action="#" method="POST" class="rightForm">
+                    <h2>Método de Pago</h2>
+                    <ul class="fieldsList">
+                        <li>
+                            <label for="payMethod"></label>
+                                <input type="number" class="inputFields" id="payMethod" name="payMethod" placeholder="Método de Pago" value="" 
+                                    oninput="" required/>
+                        </li>
+                        <li id="centerButton">
+                            <input type="submit" class="nextButton" name="nextButton" alt="Continuar" value="Continuar">
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </span>
 
        
         
 <!--JS Code-->
-    <!--<script src="../js/script.js"></script>-->
+    <script src="../js/script.js"></script>
     <script src="../js/validationScript.js"></script>
     </body>
 </html>
