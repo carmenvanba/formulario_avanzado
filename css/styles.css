@@ -11,11 +11,8 @@ body {
   overflow: hidden;
 }*/
 body{
-    /*
-    background: rgb(81,30,159);
-    background: linear-gradient(137deg, rgba(81,30,159,1) 0%, rgba(54,38,79,1) 5%, rgba(0,0,0,1) 31%);
-    */
-    background: grey;
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 41%, rgba(54,38,79,1) 100%);
     color: white;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: 500;

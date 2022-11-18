@@ -7,19 +7,21 @@ h2{
 
 header{
     background: black;
+    padding: 2%;
 }
 /* Button Plans */
 a:link, a:visited {
-    background-color: var(--myPurpleShadow);
+    background-color: var(--myPurple);
     color: white;
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    border-radius: 25px;
   }
   
   a:hover, a:active {
-    background-color: var(--myPurple);
+    background-color: rgb(124, 66, 201);
   }
 
 
@@ -38,6 +40,10 @@ a:link, a:visited {
     margin-right: 1%;
     background-color: white;
     color: black;
+  }
+  .columnTitle{
+    color: white;
+    font-size: 36px;
   }
   #columnTitle1{
     background-color: rgb(243, 166, 35);;
@@ -75,8 +81,11 @@ a:link, a:visited {
     width: 10%;
 }
 
-#header{
-    width: 100%;
+#imgHeader{
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #imgContent{
