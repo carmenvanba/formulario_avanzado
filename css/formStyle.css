@@ -62,13 +62,14 @@ p {
   font-size: 18px;
   color: white;
   margin-top: 20px;
-  padding: 10px 50px;
+  padding: 10px 10px;
+  text-align: center;
   cursor: pointer;
   transition: .4s;
 
 }
 .nextButton:hover {
-    padding: 10px 80px;
+    padding: 10px 30px;
     background: linear-gradient(45deg, rgba(118, 6, 133, 0.685), rgba(64, 21, 92, 0.856));
 }
 
@@ -84,4 +85,7 @@ p {
 .eyeImage:hover {
   opacity: 20%;
 }
+
+
+
 
