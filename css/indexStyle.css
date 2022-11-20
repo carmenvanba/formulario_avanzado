@@ -9,9 +9,9 @@ header{
     background: black;
     padding: 2%;
 }
-/* Button Plans */
+/* Button direct Plans */
 a:link, a:visited {
-    background-color: var(--myPurple);
+    background-color: var(--myPurpleShadow);
     color: white;
     padding: 14px 25px;
     text-align: center;
@@ -21,7 +21,7 @@ a:link, a:visited {
   }
   
   a:hover, a:active {
-    background-color: rgb(124, 66, 201);
+    background-color: var(--myPurple);
   }
 
 
@@ -46,10 +46,10 @@ a:link, a:visited {
     font-size: 36px;
   }
   #columnTitle1{
-    background-color: rgb(243, 166, 35);;
+    background-color: var(--myYellow);
   }
   #columnTitle2{
-    background-color: rgb(228, 7, 18);;
+    background-color: var(--myRed);
   }
   #columnTitle3{
     background-color: var(--myPurple);
@@ -93,4 +93,23 @@ a:link, a:visited {
 }
 #imgContent:hover {
     opacity: 10%;
+  }
+
+
+/* Different Plan Buttons */
+  #planButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid var(--myPurple);
+    background: var(--myPurpleShadow);
+    font-size: 18px;
+    color: white;
+    padding: 10px 50px;
+    cursor: pointer;
+    transition: .4s;
+  }
+  #planButton:hover {
+      padding: 10px 80px;
+      background: linear-gradient(45deg, rgba(118, 6, 133, 0.685), rgba(64, 21, 92, 0.856));
   }

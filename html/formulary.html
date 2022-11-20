@@ -40,36 +40,33 @@
                     <h2>Crear cuenta</h2>
                     <ul class="fieldsList">
                         <li>
-                            <label for="username"></label>
-                                <input type="text" class="inputFields" id="userName" name="userName" placeholder="Nombre" value="" 
-                                    oninput="return userNameValidation(this.value)" required/>
+                            <input type="text" class="inputFields" id="userName" name="userName" placeholder="Nombre" value="" 
+                                oninput="return userNameValidation()" required/>
                         </li>
                         <li>
-                            <label for="userLastName"></label>
-                                <input type="text" class="inputFields" id="userLastName" name="userLastName" placeholder="Apellido" value="" 
-                                    oninput="return userLastNameValidation(this.value)" required/>
+                            <input type="text" class="inputFields" id="userLastName" name="userLastName" placeholder="Apellido" value="" 
+                                oninput="return userLastNameValidation()" required/>
                         </li>
                         <li>
-                            <label for="password"></label>
-                                <input type="password" class="inputFields" id="password" name="password" placeholder="Contraseña" value="" 
-                                    oninput="return passwordValidation(this.value)" required/>
-                                <span class="showPassword">
-                                    <input type="image" src="../images/eyeIcon.png" onclick="showPassword()" class="eyeImage"/>
-                                    <!--<input type="checkbox" onclick="showPassword()">-->
-                                </span>
+                            <input type="password" class="inputFields" id="password" name="password" placeholder="Contraseña" value="" 
+                                oninput="return passwordValidation()" required/>
+
+                            <span class="showPassword">
+                                <img class="eyeImage" type="image" src="../images/eyeIcon.png" onclick="return showPassword()"/>
+                                <!--<input type="checkbox" onclick="showPassword()">-->
+                            </span>
                         </li>
                         <li>
-                            <label for="repeatPasword"></label>
-                                <input type="password" class="inputFields" id="repeatPassword" name="repeatPassword" placeholder="Repetir Contraseña" value="" 
-                                    oninput="return repeatPasswordValidation(this.value)" required/>
+                            <input type="password" class="inputFields" id="repeatPassword" name="repeatPassword" placeholder="Repetir Contraseña" value="" 
+                                oninput="return repeatPasswordValidation()" required/>
                         </li>
-                        <li>
-                            <label for="email"></label>
-                                <input type="email" class="inputFields" id="email" name="email" placeholder="Email" value="" 
-                                    oninput="return emailValidation(this.value)" required/>
+                    <li>
+                            <input type="email" class="inputFields" id="email" name="email" placeholder="Email" value="" 
+                                oninput="return emailValidation()" required/>
                         </li>
+
                         <li id="centerButton">
-                            <input type="submit" class="nextButton" name="nextButton" alt="Continuar" value="Continuar" onclick="next()">
+                            <input type="submit" class="nextButton" name="nextButton" alt="Continuar" value="Continuar" onclick="validateStep1()">
                         </li>
                     </ul>
                 </form>
@@ -86,24 +83,20 @@
                     <h2>Datos</h2>
                     <ul class="fieldsList">
                         <li>
-                            <label for="telNumber"></label>
-                                <input type="number" class="inputFields" id="telNumber" name="telNumber" placeholder="Teléfono" value="" 
-                                    oninput="" required/>
+                            <input type="number" class="inputFields" id="telNumber" name="telNumber" placeholder="Teléfono" value="" 
+                                oninput="" required/>
                         </li>
                         <li>
-                            <label for="country"></label>
-                                <input type="text" class="inputFields" id="country" name="country" placeholder="País" value="" 
-                                    oninput="" required/>
+                            <input type="text" class="inputFields" id="country" name="country" placeholder="País" value="" 
+                                oninput="" required/>
                         </li>
                         <li>
-                            <label for="city"></label>
-                                <input type="text" class="inputFields" id="city" name="city" placeholder="Ciudad" value="" 
-                                    oninput="" required/>
+                            <input type="text" class="inputFields" id="city" name="city" placeholder="Ciudad" value="" 
+                                oninput="" required/>
                         </li>
                         <li>
-                            <label for="adress"></label>
-                                <input type="text" class="inputFields" id="adress" name="adress" placeholder="Dirección" value="" 
-                                    oninput="" required/>
+                            <input type="text" class="inputFields" id="adress" name="adress" placeholder="Dirección" value="" 
+                                oninput="" required/>
                         </li>
 
 
@@ -115,8 +108,7 @@
             </div>
         </span>
 
-
-        
+ 
         <span id="step3" >
             <div class="formulary">
                 <div class="leftForm">
@@ -127,10 +119,10 @@
                     <h2>Perfil de usuario</h2>
                     <ul class="fieldsList">
                         <li>
-                            <label for="nickName"></label>
-                                <input type="number" class="inputFields" id="nickName" name="nickName" placeholder="Alias" value="" 
-                                    oninput="" required/>
+                            <input type="number" class="inputFields" id="nickName" name="nickName" placeholder="Alias" value="" 
+                                oninput="" required/>
                         </li>
+
                         <li id="centerButton">
                             <input type="submit" class="nextButton" name="nextButton" alt="Continuar" value="Continuar">
                         </li>
@@ -150,10 +142,10 @@
                     <h2>Método de Pago</h2>
                     <ul class="fieldsList">
                         <li>
-                            <label for="payMethod"></label>
-                                <input type="number" class="inputFields" id="payMethod" name="payMethod" placeholder="Método de Pago" value="" 
-                                    oninput="" required/>
+                            <input type="number" class="inputFields" id="payMethod" name="payMethod" placeholder="Método de Pago" value="" 
+                                oninput="" required/>
                         </li>
+                        
                         <li id="centerButton">
                             <input type="submit" class="nextButton" name="nextButton" alt="Continuar" value="Continuar">
                         </li>
@@ -165,7 +157,8 @@
        
         
 <!--JS Code-->
-    <script src="../js/script.js"></script>
+    <script src="../js/classes.js"></script>
+    <script src="../js/formScript.js"></script>
     <script src="../js/validationScript.js"></script>
     </body>
 </html>

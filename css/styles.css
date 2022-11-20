@@ -2,6 +2,8 @@
 :root {
 	--myPurple: #511e9f;
 	--myPurpleShadow: #36264f;
+  --myYellow: rgb(243, 166, 35);
+  --myRed: rgb(228, 7, 18);
 }
 
 /*
@@ -11,8 +13,8 @@ body {
   overflow: hidden;
 }*/
 body{
-  background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 41%, rgba(54,38,79,1) 100%);
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 41%, rgba(54,38,79,1) 100%);
     color: white;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: 500;
