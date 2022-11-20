@@ -117,32 +117,44 @@
                     <h2>Método de Pago</h2>
                     <ul class="fieldsList">
                         <li>
-                            <input type="radio" id="creditCard" name="payment" value="creditCard" onclick="creditCardPayment()">Tarjeta de Crédito
-                            <input type="radio" id="paypal" name="payment" value="paypal" onclick="paypalPayment()">Paypal
+                            <div class="wrapper">
+                                <input type="radio" id="creditCard" name="payment" value="creditCard" onclick="creditCardPayment()">
+                                <input type="radio" id="paypal" name="payment" value="paypal" onclick="paypalPayment()">
+
+                                    <label for="creditCard" class="option creditCard">
+                                        <div class="dot"></div>
+                                        <span>Tarjeta de Crédito</span>
+                                    </label>
+
+                                    <label for="paypal" class="option paypal">
+                                    <div class="dot"></div>
+                                     <span>Paypal</span>
+                                    </label>
+                            </div>
                         </li>
                         <span id="creditCardPayment">
                             <br>
                             <li>
                                 Número de Tarjeta<br>
-                                <input type="text" class="inputFields" id="creditCardNumber" placeholder="1234 1234 1234" value="" 
+                                <input type="text" class="inputFields" id="creditCardNumber" placeholder="1234 1234 1234" value="1234 1234 1234" 
                                     oninput="return creditCardNumberValidation()" required/>
                             </li>
                             <li>
                                 CVC<br>
-                                <input type="text" class="inputFields" id="cvc" placeholder="CVC" value="" 
+                                <input type="text" class="inputFields" id="cvc" placeholder="CVC" value="123" 
                                     oninput="return cvcValidation()" required/>
                             </li>
                             <li>
                                 Fecha de Caducidad<br>
-                                <input type="text" class="inputFields" id="expireDate" placeholder="MM/AA" value="" 
+                                <input type="text" class="inputFields" id="expireDate" placeholder="MM/AA" value="12/21" 
                                     oninput="" required/>
                             </li>
                         </span>
 
-                        <span id="paypalPayment">Aquí el redireccionamiento a paypal</span>
+                        <span id="paypalPayment"><br>Aquí el redireccionamiento a paypal</span>
                         
                         <li id="centerButton">
-                            <button type="submit" class="nextButton" name="nextButton" alt="Continuar" onclick="validateStep4()">Continuar</button>
+                            <button type="submit" class="nextButton" name="nextButton" alt="Continuar" onclick="validateStep3()">Continuar</button>
                         </li>
                     </ul>
                 </div>
@@ -160,12 +172,60 @@
                     <h2>Perfil de usuario</h2>
                     <ul class="fieldsList">
                         <li>
-                            <input type="text" class="inputFields" id="nickName" name="nickName" placeholder="Alias" value="" 
-                                oninput="" required/>
+                            <input type="text" class="inputFields" id="nickName" name="nickName" placeholder="Nick" value="" 
+                            oninput="return validateNickName()" required/>
+                        </li>
+                        <li>
+                            <div class="wrapper">
+                                <input type="radio" id="el" name="pronouns" value="el">
+                                <input type="radio" id="ella" name="pronouns" value="ella">
+                                <input type="radio" id="elle" name="pronouns" value="elle" checked>
+
+                                    <label for="el" class="option el">
+                                        <div class="dot"></div>
+                                        <span>Él</span>
+                                    </label>
+
+                                    <label for="ella" class="option ella">
+                                    <div class="dot"></div>
+                                     <span>Ella</span>
+                                    </label>
+                                    <label for="elle" class="option elle">
+                                        <div class="dot"></div>
+                                        <span>Elle</span>
+                                    </label>
+                            </div>
+                        </li>
+                        <br>
+                        <li>
+                            <textarea type="text" class="inputFields" id="bio" name="bio" placeholder="Sobre ti" value="" maxlength="255"></textarea>
+                        </li>
+                        <li>
+                            <div class="wrapper">
+                                <input type="radio" id="player" name="player" value="player" checked>
+                                <input type="radio" id="dungeonMaster" name="player" value="dungeonMaster">
+                                <input type="radio" id="playerAndDm" name="player" value="playerAndDm">
+
+                                    <label for="player" class="option player">
+                                        <div class="dot"></div>
+                                        <span>Jugador</span>
+                                    </label>
+
+                                    <label for="dungeonMaster" class="option dungeonMaster">
+                                    <div class="dot"></div>
+                                     <span>Máster</span>
+                                    </label>
+                                    <label for="playerAndDm" class="option playerAndDm">
+                                        <div class="dot"></div>
+                                        <span>Ambos</span>
+                                    </label>
+                            </div>
                         </li>
 
+
+
                         <li id="centerButton">
-                            <button  class="nextButton" name="nextButton" alt="Continuar">Continuar</button>
+                            <button  class="nextButton" name="nextButton" alt="Continuar" onclick="validateStep4()">Continuar</button>
                         </li>
                     </ul>
                 </div>

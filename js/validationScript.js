@@ -323,9 +323,37 @@ function expireDate() {
     return validated;
 }//Fin expireDate Validation
 
-function validateStep4(){
+function validateStep3(){
     var validated = creditCardNumberValidation() && cvcValidation() && expireDate();
     if(validated){
         goToStep4();
+    }//Fin Si
+}
+
+
+//Step 4
+function validateNickName(){
+    var nickName = document.getElementById("nickName");
+    var issueArr = [];
+    var validated = false;
+    if(document.getElementById("nickName").value.length==0){
+        nickName.style.borderColor = alertRedInput;
+    }else{
+        if (issueArr.length > 0) {
+            nickName.setCustomValidity(issueArr);
+            nickName.style.borderColor = alertRedInput;
+        } else {
+            nickName.setCustomValidity("");
+            nickName.style.borderColor = defaultInput;
+            validated=true;
+        }//Fin Si
+    }//Fin Si
+    return validated;
+}//Fin validateNickName Validation
+
+
+function validateStep4(){
+    if(validateNickName()){
+        goToUserSheet();
     }//Fin Si
 }

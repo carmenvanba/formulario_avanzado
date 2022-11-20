@@ -87,5 +87,89 @@ p {
 }
 
 
-
-
+/* Check input */
+.wrapper{
+  display: inline-flex;
+  width: 400px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  padding: 15px 15px;
+  box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+}
+.wrapper .option{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 10px;
+  transition: all 0.3s ease;
+}
+.wrapper .option .dot{
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 30%;
+  position: relative;
+}
+.wrapper .option .dot::before{
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: var(--myPurple);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type="radio"]{
+  display: none;
+}
+#creditCard:checked:checked ~ .creditCard,
+#paypal:checked:checked ~ .paypal,
+#el:checked:checked ~ .el,
+#ella:checked:checked ~ .ella,
+#elle:checked:checked ~ .elle,
+#player:checked:checked ~ .player,
+#dungeonMaster:checked:checked ~ .dungeonMaster,
+#playerAndDm:checked:checked ~ .playerAndDm{
+  background: var(--myPurple);
+}
+#creditCard:checked:checked ~ .creditCard .dot,
+#paypal:checked:checked ~ .paypal .dot,
+#el:checked:checked ~ .el .dot,
+#ella:checked:checked ~ .ella .dot,
+#elle:checked:checked ~ .elle .dot,
+#player:checked:checked ~ .player .dot,
+#dungeonMaster:checked:checked ~ .dungeonMaster .dot,
+#playerAndDm:checked:checked ~ .playerAndDm .dot{
+  background: #fff;
+}
+#creditCard:checked:checked ~ .creditCard .dot::before,
+#paypal:checked:checked ~ .paypal .dot::before,
+#el:checked:checked ~ .el .dot::before,
+#ella:checked:checked ~ .ella .dot::before,
+#elle:checked:checked ~ .elle .dot::before,
+#player:checked:checked ~ .player .dot::before,
+#dungeonMaster:checked:checked ~ .dungeonMaster .dot::before,
+#playerAndDm:checked:checked ~ .playerAndDm .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+#creditCard:checked:checked ~ .creditCard span,
+#paypal:checked:checked ~ .paypal span,
+#el:checked:checked ~ .el span,
+#ella:checked:checked ~ .ella span,
+#elle:checked:checked ~ .elle span,
+#player:checked:checked ~ .player span,
+#dungeonMaster:checked:checked ~ .dungeonMaster span,
+#playerAndDm:checked:checked ~ .playerAndDm span{
+  color: #fff;
+}
