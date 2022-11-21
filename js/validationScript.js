@@ -1,6 +1,8 @@
 //Variables
 var alertRedInput = "#8C1010";
 var defaultInput = "green";
+var account = new Account();
+var profile = new Profile();
 
 //Validate Step 1
 //User Name Validation
@@ -143,6 +145,12 @@ function validateStep1(){
     var validated = userNameValidation() && userLastNameValidation() && passwordValidation() 
     && repeatPasswordValidation() && emailValidation();
     if(validated){
+        //Save the data
+        account.setName(document.getElementById("userName").value);
+        account.setLastName(document.getElementById("userLastName").value);
+        account.setPassword(document.getElementById("password").value);
+        account.setEmail(document.getElementById("email").value);
+        //Go to the next step
         goToStep2();
     }//Fin Si
 }//Fin validateStep1
@@ -248,6 +256,12 @@ function adressValidation() {
 function validateStep2(){
     var validated = telNumberValidation() && countryValidation() && cityValidation() && adressValidation();
     if(validated){
+        //Save the data
+        account.setTelNumber(document.getElementById("telNumber").value);
+        account.setCountry(document.getElementById("country").value);
+        account.setCity(document.getElementById("city").value);
+        account.setAdress(document.getElementById("adress").value);
+        //Go to the next step
         goToStep3();
     }//Fin Si
 }
@@ -326,6 +340,12 @@ function expireDate() {
 function validateStep3(){
     var validated = creditCardNumberValidation() && cvcValidation() && expireDate();
     if(validated){
+        //Save the data
+        account.setCreditCardNumber(document.getElementById("creditCardNumber").value);
+        account.setCreditCardCvc(document.getElementById("cvc").value);
+        account.setCreditCardExpireDate(document.getElementById("expireDate").value);
+        //account.setPaypalAccount(document.getElementById("paypalAccount").value);
+        //Go to the next step
         goToStep4();
     }//Fin Si
 }
@@ -354,7 +374,16 @@ function validateNickName(){
 
 function validateStep4(){
     if(validateNickName()){
-        alert("Entra");
+        //Save the data
+        profile.setNick(document.getElementById("nickName").value);
+        profile.setBio(document.getElementById("bio").value);
+        profile.setPronouns(document.getElementsByName("pronouns").value);
+        profile.setRole(document.getElementsByName("player").value);
+        
+        //Save objects account and profile in sessionstorage
+        sessionStorage.setItem('accountSaved',JSON.stringify(account.getJson()));
+        sessionStorage.setItem('profileSaved',JSON.stringify(profile.getJson()));
+        //Go to the next step
         window.location.replace("/html/userData.html");
     }//Fin Si
 }

@@ -1,18 +1,16 @@
 //Variables
-var plan;
-var typePlan;
-var profile;
+var account = new Account();
+
 //Import Plan from Storage
-var planImport = JSON.parse(sessionStorage.getItem('planSaved'));
+var accountImport = JSON.parse(sessionStorage.getItem('accountSaved'));
+account = accountImport;
+console.log(accountImport);
+console.log(account);
+console.log(account.getName());
 
-if(sessionStorage.getItem('typePlan')=="Hero"){
-    plan = new Hero();
-}else if(sessionStorage.getItem('typePlan')=="Master"){
-    plan = new Wizard();
-}else{
-    plan = new Legend();
-}//Fin Si
 
-//Show plan character
-    //document.getElementById("espacio1").textContent = plan.getImage();
-    //document.getElementById("espacio2").innerHTML = "La imagen: "+plan.getImage();
+console.log()
+
+
+//document.getElementById("prueba1").textContent = account.getName();
+//document.getElementById("prueba1").innerHTML = "El Nombre: "+account.getName();
