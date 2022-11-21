@@ -354,6 +354,7 @@ function validateNickName(){
 
 function validateStep4(){
     if(validateNickName()){
-        goToUserSheet();
+        alert("Entra");
+        window.location.replace("/html/userData.html");
     }//Fin Si
 }

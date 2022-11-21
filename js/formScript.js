@@ -47,12 +47,3 @@ function paypalPayment(){
     document.getElementById("creditCardPayment").style.display = "none";
     document.getElementById("paypalPayment").style.display = "block";
 }
-
-
-
-
-
-function goToUserSheet() {
-    alert("OLE");
-    window.location.replace("userSheet.html");
-}

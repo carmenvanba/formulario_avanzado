@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Free Web tutorials">
+    <meta name="description" content="Dnd tool">
     <meta name="keywords" content="dnd, suscription, sourcebooks">
     <meta name="author" content="Carmen van-Baumberghen Rodríguez">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,7 +64,7 @@
                         </li>
 
                         <li id="centerButton">
-                            <button class="nextButton" name="nextButton" alt="Continuar" onclick="validateStep1()">Continuar</button>
+                            <button type="button" class="nextButton" name="nextButton" alt="Continuar" onclick="validateStep1()">Continuar</button>
                         </li>
                     </ul>
                 </div>
@@ -99,7 +99,7 @@
 
 
                         <li id="centerButton">
-                            <button  class="nextButton" name="nextButton" alt="Continuar" onclick="validateStep2()">Continuar</button>
+                            <button type="button" class="nextButton" name="nextButton" alt="Continuar" onclick="validateStep2()">Continuar</button>
                         </li>
                     </ul>
                 </div>
@@ -154,7 +154,7 @@
                         <span id="paypalPayment"><br>Aquí el redireccionamiento a paypal</span>
                         
                         <li id="centerButton">
-                            <button type="submit" class="nextButton" name="nextButton" alt="Continuar" onclick="validateStep3()">Continuar</button>
+                            <button type="button" class="nextButton" name="nextButton" alt="Continuar" onclick="validateStep3()">Continuar</button>
                         </li>
                     </ul>
                 </div>
@@ -172,8 +172,8 @@
                     <h2>Perfil de usuario</h2>
                     <ul class="fieldsList">
                         <li>
-                            <input type="text" class="inputFields" id="nickName" name="nickName" placeholder="Nick" value="" 
-                            oninput="return validateNickName()" required/>
+                            <input type="text" class="inputFields" id="nickName" placeholder="Nick" value="" 
+                                oninput="return validateNickName()" required/>
                         </li>
                         <li>
                             <div class="wrapper">
@@ -225,7 +225,7 @@
 
 
                         <li id="centerButton">
-                            <button  class="nextButton" name="nextButton" alt="Continuar" onclick="validateStep4()">Continuar</button>
+                            <button type="button" class="nextButton" name="nextButton" alt="Enviar" onclick="validateStep4()">Enviar</button>
                         </li>
                     </ul>
                 </div>
