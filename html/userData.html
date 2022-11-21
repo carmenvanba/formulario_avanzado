@@ -9,13 +9,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/sheetStyle.css">
+    <link rel="stylesheet" href="../css/heroPlanStyle.css">
     <title>Suscribirse a D&D Byond</title>
 </head>
 
     <body>
-       
-<div id="prueba1"></div>
+        <header>
+            HEADER
+            <div id="plan"></div>
+        </header>
+
+        <div class="userData">
+            <div class="row">
+                <div class="center">
+                    <h2>Datos de la Cuenta</h2>
+                    <div class="columnLeft">
+                        Nombre: <span class="field" id="name"></span>
+                        <br>
+                        Email: <span class="field" id="email"></span>
+                        <br>
+                        País: <span class="field" id="country"></span>
+                    </div>
+                    <div class="columnRight">
+                        Apellido: <span class="field" id="lastName"></span>
+                        <br>
+                        Número de Teléfono: <span class="field" id="telNumber"></span>
+                        <br>
+                        Ciudad: <span class="field" id="city"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                Dirección: <span class="field" id="address"></span>
+                <h2>Método de Pago</h2>
+                <span id="creditCard">
+                    <span class="field" id="creditCardNumber"></span>
+                </span>
+                <span id="paypal">
+                    <span class="field" id="paypalAccount"></span>
+                </span>
+            </div>
+            <button id="nextButton" alt="Continuar" onclick="">Continuar</button>
+        </div>
+        
        
         
 <!--JS Code-->

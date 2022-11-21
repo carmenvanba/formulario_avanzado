@@ -1,0 +1,91 @@
+body{
+    background-repeat: no-repeat;
+    background-color: var(--myPurpleShadow);
+}
+
+.userData{
+  background: url(../images/galactic.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10%;
+  height: 40%;
+  width: 100%;
+  color: white;
+  box-shadow: 3px 10px 20px 5px #0F1011;
+  transition: .2s;
+}
+
+/* Create two equal columns that floats next to each other */
+.columnLeft , .columnRight {
+  float: left;
+  width: 40%;
+  padding: 1%;
+  background-color: #36264f73;
+  border-radius: 5px;
+  margin: 3%;
+}
+.columnLeft{
+  border: 1px;
+  border-style: solid;
+  border-color: var(--myYellow);
+}
+.columnRight{
+  border: 1px;
+  border-style: solid;
+  border-color: var(--myYellow);
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  background-color: #36264f73;
+  padding: 0.5%;
+  border: 2px;
+  border-style: solid;
+  border-color: var(--myYellow);
+  border-radius: 4px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.field{
+  background-color: #36264f73;
+  /*
+  border: 1px;
+  border-style: solid;
+  border-color: var(--myYellow);
+  border-radius: 5px;
+  */
+  padding: 1%;
+  border-radius: 3px;
+}
+
+
+#nextButton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  border: 1px solid var(--myYellowShadow);
+  background: var(--myYellow);
+  font-size: 18px;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: .4s;
+}
+#nextButton:hover {
+    padding: 10px 30px;
+    background: linear-gradient(45deg, rgba(255, 196, 0, 0.877), rgba(248, 111, 31, 0.904));
+}
