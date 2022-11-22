@@ -62,6 +62,10 @@ function passwordValidation() {
     var password = document.getElementById("password");
     var issueArr = [];
     var validated = false;
+     //reset error   
+     password.setCustomValidity("");
+     password.style.borderColor = defaultInput;
+
     if(document.getElementById("password").value.length==0){
         password.style.borderColor = alertRedInput;
     }else{
@@ -80,9 +84,8 @@ function passwordValidation() {
         if (issueArr.length > 0) {
             password.setCustomValidity(issueArr.join("\n"));
             password.style.borderColor = alertRedInput;
+            password.reportValidity();
         } else {
-            password.setCustomValidity("");
-            password.style.borderColor = defaultInput;
             validated = true;
         }//Fin Si
     }//Fin Si
@@ -94,6 +97,10 @@ function repeatPasswordValidation() {
     var repeatPassword = document.getElementById("repeatPassword");
     var issueArr = [];
     var validated = false;
+    //reset error   
+    repeatPassword.setCustomValidity("");
+    repeatPassword.style.borderColor = defaultInput;
+
     if(document.getElementById("repeatPassword").value.length==0){
         repeatPassword.style.borderColor = alertRedInput;
     }else{
@@ -103,9 +110,8 @@ function repeatPasswordValidation() {
         if (issueArr.length > 0) {
             repeatPassword.setCustomValidity(issueArr.join("\n"));
             repeatPassword.style.borderColor = alertRedInput;
+            repeatPassword.reportValidity();
         } else {
-            repeatPassword.setCustomValidity("");
-            repeatPassword.style.borderColor = defaultInput;
             validated = true;
         }//Fin Si
     }//Fin Si
@@ -117,6 +123,10 @@ function emailValidation() {
     var email = document.getElementById("email");
     var issueArr = [];
     var validated = false;
+    //reset error   
+    email.setCustomValidity("");
+    email.style.borderColor = defaultInput;
+
     if(document.getElementById("email").value.length==0){
         email.style.borderColor = alertRedInput;
     }else{
@@ -126,9 +136,8 @@ function emailValidation() {
         if (issueArr.length > 0) {
             email.setCustomValidity(issueArr.join("\n"));
             email.style.borderColor = alertRedInput;
+            email.reportValidity();
         } else {
-            email.setCustomValidity("");
-            email.style.borderColor = defaultInput;
             validated = true;
         }//Fin Si
     }//Fin Si
@@ -170,6 +179,10 @@ function telNumberValidation() {
     var telNumber = document.getElementById("telNumber");
     var issueArr = [];
     var validated = false;
+    //reset error   
+    telNumber.setCustomValidity("");
+    telNumber.style.borderColor = defaultInput;
+
     if(document.getElementById("telNumber").value.length==0){
         telNumber.style.borderColor = alertRedInput;
     }else{
@@ -179,9 +192,8 @@ function telNumberValidation() {
         if (issueArr.length > 0) {
             telNumber.setCustomValidity(issueArr);
             telNumber.style.borderColor = alertRedInput;
+            telNumber.reportValidity();
         } else {
-            telNumber.setCustomValidity("");
-            telNumber.style.borderColor = defaultInput;
             validated=true;
         }//Fin Si
     }//Fin Si
@@ -193,6 +205,10 @@ function countryValidation() {
     var country = document.getElementById("country");
     var issueArr = [];
     var validated = false;
+    //reset error   
+    country.setCustomValidity("");
+    country.style.borderColor = defaultInput;
+
     if(document.getElementById("country").value.length==0){
         country.style.borderColor = alertRedInput;
     }else{
@@ -202,9 +218,8 @@ function countryValidation() {
         if (issueArr.length > 0) {
             country.setCustomValidity(issueArr);
             country.style.borderColor = alertRedInput;
+            country.reportValidity();
         } else {
-            country.setCustomValidity("");
-            country.style.borderColor = defaultInput;
             validated=true;
         }//Fin Si
     }//Fin Si
@@ -217,6 +232,10 @@ function cityValidation() {
     var city = document.getElementById("city");
     var issueArr = [];
     var validated = false;
+    //reset error   
+    city.setCustomValidity("");
+    city.style.borderColor = defaultInput;
+
     if(document.getElementById("city").value.length==0){
         city.style.borderColor = alertRedInput;
     }else{
@@ -226,9 +245,8 @@ function cityValidation() {
         if (issueArr.length > 0) {
             city.setCustomValidity(issueArr);
             city.style.borderColor = alertRedInput;
+            city.reportValidity();
         } else {
-            city.setCustomValidity("");
-            city.style.borderColor = defaultInput;
             validated=true;
         }//Fin Si
     }//Fin Si
@@ -240,6 +258,10 @@ function adressValidation() {
     var adress = document.getElementById("adress");
     var issueArr = [];
     var validated = false;
+    //reset error   
+    adress.setCustomValidity("");
+    adress.style.borderColor = defaultInput;
+
     if(document.getElementById("adress").value.length==0){
         adress.style.borderColor = alertRedInput;
     }else{
@@ -249,9 +271,8 @@ function adressValidation() {
         if (issueArr.length > 0) {
             adress.setCustomValidity(issueArr);
             adress.style.borderColor = alertRedInput;
+            adress.reportValidity();
         } else {
-            adress.setCustomValidity("");
-            adress.style.borderColor = defaultInput;
             validated=true;
         }//Fin Si
     }//Fin Si
@@ -279,6 +300,10 @@ function creditCardNumberValidation() {
     var creditCardNumber = document.getElementById("creditCardNumber");
     var issueArr = [];
     var validated = false;
+    //reset error   
+    creditCardNumber.setCustomValidity("");
+    creditCardNumber.style.borderColor = defaultInput;
+
     if(document.getElementById("creditCardNumber").value.length==0){
         creditCardNumber.style.borderColor = alertRedInput;
     }else{
@@ -288,9 +313,8 @@ function creditCardNumberValidation() {
         if (issueArr.length > 0) {
             creditCardNumber.setCustomValidity(issueArr);
             creditCardNumber.style.borderColor = alertRedInput;
+            creditCardNumber.reportValidity();
         } else {
-            creditCardNumber.setCustomValidity("");
-            creditCardNumber.style.borderColor = defaultInput;
             validated=true;
         }//Fin Si
     }//Fin Si
@@ -302,6 +326,10 @@ function cvcValidation() {
     var cvc = document.getElementById("cvc");
     var issueArr = [];
     var validated = false;
+    //reset error   
+    cvc.setCustomValidity("");
+    cvc.style.borderColor = defaultInput;
+
     if(document.getElementById("cvc").value.length==0){
         cvc.style.borderColor = alertRedInput;
     }else{
@@ -311,9 +339,8 @@ function cvcValidation() {
         if (issueArr.length > 0) {
             cvc.setCustomValidity(issueArr);
             cvc.style.borderColor = alertRedInput;
+            cvc.reportValidity();
         } else {
-            cvc.setCustomValidity("");
-            cvc.style.borderColor = defaultInput;
             validated=true;
         }//Fin Si
     }//Fin Si
@@ -325,6 +352,10 @@ function expireDate() {
     var expireDate = document.getElementById("expireDate");
     var issueArr = [];
     var validated = false;
+    //reset error   
+    expireDate.setCustomValidity("");
+    expireDate.style.borderColor = defaultInput;
+
     if(document.getElementById("expireDate").value.length==0){
         expireDate.style.borderColor = alertRedInput;
     }else{
@@ -334,9 +365,8 @@ function expireDate() {
         if (issueArr.length > 0) {
             expireDate.setCustomValidity(issueArr);
             expireDate.style.borderColor = alertRedInput;
+            expireDate.reportValidity();
         } else {
-            expireDate.setCustomValidity("");
-            expireDate.style.borderColor = defaultInput;
             validated=true;
         }//Fin Si
     }//Fin Si
@@ -362,15 +392,18 @@ function validateNickName(){
     var nickName = document.getElementById("nickName");
     var issueArr = [];
     var validated = false;
+    //reset error   
+    nickName.setCustomValidity("");
+    nickName.style.borderColor = defaultInput;
+
     if(document.getElementById("nickName").value.length==0){
         nickName.style.borderColor = alertRedInput;
     }else{
         if (issueArr.length > 0) {
             nickName.setCustomValidity(issueArr);
             nickName.style.borderColor = alertRedInput;
+            nickName.reportValidity();
         } else {
-            nickName.setCustomValidity("");
-            nickName.style.borderColor = defaultInput;
             validated=true;
         }//Fin Si
     }//Fin Si
