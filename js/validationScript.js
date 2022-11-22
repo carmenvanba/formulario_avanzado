@@ -7,28 +7,23 @@ var profile = new Profile();
 //Validate Step 1
 //User Name Validation
 function userNameValidation() {
-    var username = document.getElementById("userName");
+    var userName = document.getElementById("userName");
     var issueArr = [];
     var validated = false;
     //reset error   
-    username.setCustomValidity("");
-    username.style.borderColor = defaultInput;
+    userName.setCustomValidity("");
+    userName.style.borderColor = defaultInput;
 
     if(document.getElementById("userName").value.length==0){
-        username.style.borderColor = alertRedInput;
-        
-        console.log("1");
+        userName.style.borderColor = alertRedInput;
     }else{
-        if (/[-¡!@#$%^&*()_+|~=`{}\[\]:";'<>¿?,.\/]/.test(username.value)) {
+        if (/[-¡!@#$%^&*()_+|~=`{}\[\]:";'<>¿?,.\/]/.test(userName.value)) {
             issueArr.push("¡No usar caracteres especiales!");
-            
-            console.log("2");
         }//Fin Si
         if (issueArr.length > 0) {
-            console.log("3");
-            username.setCustomValidity(issueArr);
-            username.style.borderColor = alertRedInput;
-            username.reportValidity();
+            userName.setCustomValidity(issueArr);
+            userName.style.borderColor = alertRedInput;
+            userName.reportValidity();
         } else {
             validated=true;
         }//Fin Si
@@ -42,8 +37,8 @@ function userLastNameValidation() {
     var issueArr = [];
     var validated = false;
     //reset error   
-    username.setCustomValidity("");
-    username.style.borderColor = defaultInput;
+    userLastName.setCustomValidity("");
+    userLastName.style.borderColor = defaultInput;
 
     if(document.getElementById("userLastName").value.length==0){
         userLastName.style.borderColor = alertRedInput;
@@ -54,9 +49,8 @@ function userLastNameValidation() {
         if (issueArr.length > 0) {
             userLastName.setCustomValidity(issueArr);
             userLastName.style.borderColor = alertRedInput;
+            userLastName.reportValidity();
         } else {
-            userLastName.setCustomValidity("");
-            userLastName.style.borderColor = defaultInput;
             validated=true;
         }//Fin Si
     }//Fin Si
@@ -68,10 +62,6 @@ function passwordValidation() {
     var password = document.getElementById("password");
     var issueArr = [];
     var validated = false;
-    //reset error   
-    username.setCustomValidity("");
-    username.style.borderColor = defaultInput;
-
     if(document.getElementById("password").value.length==0){
         password.style.borderColor = alertRedInput;
     }else{
