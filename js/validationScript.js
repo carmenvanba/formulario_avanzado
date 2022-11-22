@@ -3,6 +3,7 @@ var alertRedInput = "#8C1010";
 var defaultInput = "green";
 var account = new Account();
 var profile = new Profile();
+progressBarr(1);
 
 //Validate Step 1
 //User Name Validation
@@ -167,7 +168,7 @@ function validateStep1(){
         account.setEmail(document.getElementById("email").value);
         //Go to the next step
         goToStep2();
-        progressBarr(1);
+        progressBarr(2);
     }//Fin Si
 }//Fin validateStep1
 
@@ -291,6 +292,7 @@ function validateStep2(){
         account.setAdress(document.getElementById("adress").value);
         //Go to the next step
         goToStep3();
+        progressBarr(3);
     }//Fin Si
 }
 
@@ -384,6 +386,7 @@ function validateStep3(){
         //account.setPaypalAccount(document.getElementById("paypalAccount").value);
         //Go to the next step
         goToStep4();
+        progressBarr(4);
     }//Fin Si
 }
 
@@ -414,6 +417,9 @@ function validateNickName(){
 
 function validateStep4(){
     if(validateNickName()){
+        
+        progressBarr(5);
+        
         //Save the data
         profile.setNick(document.getElementById("nickName").value);
         profile.setBio(document.getElementById("bio").value);
@@ -423,7 +429,10 @@ function validateStep4(){
         //Save objects account and profile in sessionstorage
         sessionStorage.setItem('accountSaved',JSON.stringify(account.getJson()));
         sessionStorage.setItem('profileSaved',JSON.stringify(profile.getJson()));
-        //Go to the next step
-        window.location.replace("/html/userData.html");
+
+        setTimeout(() => {  
+            //Go to the next step
+            window.location.replace("/html/userData.html");
+        }, 1000);
     }//Fin Si
 }
