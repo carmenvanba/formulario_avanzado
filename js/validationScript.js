@@ -10,18 +10,26 @@ function userNameValidation() {
     var username = document.getElementById("userName");
     var issueArr = [];
     var validated = false;
+    //reset error   
+    username.setCustomValidity("");
+    username.style.borderColor = defaultInput;
+
     if(document.getElementById("userName").value.length==0){
         username.style.borderColor = alertRedInput;
+        
+        console.log("1");
     }else{
         if (/[-¡!@#$%^&*()_+|~=`{}\[\]:";'<>¿?,.\/]/.test(username.value)) {
             issueArr.push("¡No usar caracteres especiales!");
+            
+            console.log("2");
         }//Fin Si
         if (issueArr.length > 0) {
+            console.log("3");
             username.setCustomValidity(issueArr);
             username.style.borderColor = alertRedInput;
+            username.reportValidity();
         } else {
-            username.setCustomValidity("");
-            username.style.borderColor = defaultInput;
             validated=true;
         }//Fin Si
     }//Fin Si
@@ -33,6 +41,10 @@ function userLastNameValidation() {
     var userLastName = document.getElementById("userLastName");
     var issueArr = [];
     var validated = false;
+    //reset error   
+    username.setCustomValidity("");
+    username.style.borderColor = defaultInput;
+
     if(document.getElementById("userLastName").value.length==0){
         userLastName.style.borderColor = alertRedInput;
     }else{
@@ -56,6 +68,10 @@ function passwordValidation() {
     var password = document.getElementById("password");
     var issueArr = [];
     var validated = false;
+    //reset error   
+    username.setCustomValidity("");
+    username.style.borderColor = defaultInput;
+
     if(document.getElementById("password").value.length==0){
         password.style.borderColor = alertRedInput;
     }else{
