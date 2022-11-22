@@ -4,7 +4,6 @@ var typePlan;
 var profile;
 //Import Plan from Storage
 var planImport = JSON.parse(sessionStorage.getItem('planSaved'));
-
 if(sessionStorage.getItem('typePlan')=="Hero"){
     plan = new Hero();
 }else if(sessionStorage.getItem('typePlan')=="Master"){
@@ -50,9 +49,10 @@ function paypalPayment(){
 
 
 /* Progress bar */
-var i = 1;
+//var i = 1;
 $('.progress .circle').removeClass().addClass('circle');
 $('.progress .bar').removeClass().addClass('bar');
+/*
 
     $('.progress .circle:nth-of-type(' + i + ')').addClass('active');
 
@@ -71,3 +71,23 @@ $('.progress .bar').removeClass().addClass('bar');
         $('.progress div.circle').removeClass().addClass('circle');
         i = 1;
     }//Fin Si
+*/
+
+    function progressBarr (i){
+        if(i == 0){
+            $('.progress .circle').removeClass().addClass('circle');
+            $('.progress .bar').removeClass().addClass('bar');
+        }else{
+        
+            $('.progress .circle:nth-of-type(' + i + ')').addClass('active');
+    
+            $('.progress .circle:nth-of-type(' + (i-1) + ')').removeClass('active').addClass('done');
+    
+            $('.progress .circle:nth-of-type(' + (i-1) + ') .label').html('&#10003;');
+    
+            $('.progress .bar:nth-of-type(' + (i-1) + ')').addClass('active');
+    
+            $('.progress .bar:nth-of-type(' + (i-2) + ')').removeClass('active').addClass('done');
+
+        }
+    }

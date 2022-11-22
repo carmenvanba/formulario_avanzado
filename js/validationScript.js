@@ -167,6 +167,7 @@ function validateStep1(){
         account.setEmail(document.getElementById("email").value);
         //Go to the next step
         goToStep2();
+        progressBarr(1);
     }//Fin Si
 }//Fin validateStep1
 
