@@ -440,7 +440,7 @@ function validateStep4(){
 
         setTimeout(() => {  
             //Go to the next step
-            window.location.replace("/html/userData.html");
+            window.location.replace("../html/userData.html");
         }, 1000);
     }//Fin Si
 }
