@@ -49,7 +49,7 @@ function paypalPayment(){
 
 
 /* Progress bar */
-
+console.log("dasd");
 $('.progress .circle').removeClass().addClass('circle');
 $('.progress .bar').removeClass().addClass('bar');
 function progressBarr (i){
