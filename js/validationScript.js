@@ -3,6 +3,9 @@ var alertRedInput = "#8C1010";
 var defaultInput = "green";
 var account = new Account();
 var profile = new Profile();
+document.getElementById("characterProgress2").style.display = "none"
+document.getElementById("characterProgress3").style.display = "none"
+document.getElementById("characterProgress4").style.display = "none"
 progressBarr(1);
 
 //Validate Step 1
@@ -168,6 +171,8 @@ function validateStep1(){
         account.setEmail(document.getElementById("email").value);
         //Go to the next step
         goToStep2();
+        document.getElementById("characterProgress1").style.display = "none"
+        document.getElementById("characterProgress2").style.display = "block"
         progressBarr(2);
     }//Fin Si
 }//Fin validateStep1
@@ -292,6 +297,8 @@ function validateStep2(){
         account.setAdress(document.getElementById("adress").value);
         //Go to the next step
         goToStep3();
+        document.getElementById("characterProgress2").style.display = "none"
+        document.getElementById("characterProgress3").style.display = "block"
         progressBarr(3);
     }//Fin Si
 }
@@ -386,6 +393,8 @@ function validateStep3(){
         //account.setPaypalAccount(document.getElementById("paypalAccount").value);
         //Go to the next step
         goToStep4();
+        document.getElementById("characterProgress3").style.display = "none"
+        document.getElementById("characterProgress4").style.display = "block"
         progressBarr(4);
     }//Fin Si
 }
@@ -417,7 +426,6 @@ function validateNickName(){
 
 function validateStep4(){
     if(validateNickName()){
-        
         progressBarr(5);
         
         //Save the data
