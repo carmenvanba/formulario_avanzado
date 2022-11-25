@@ -1,4 +1,7 @@
 /* Titles and texts */
+h1{
+  padding: 10%;
+}
 h2{
     text-align: center;
     text-transform: uppercase;
@@ -6,9 +9,25 @@ h2{
 }
 
 header{
-    background: black;
-    padding: 2%;
+  background-image: url(../images/header.jpg);
+  height: 100%;
 }
+.intro{
+  bottom: 90px;
+  left: 16px;
+  width: 50%;
+  padding: 1%;
+  background-color: #4c264fa9;
+  border-radius: 5px;
+}
+
+/*
+.buttonPlans{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}*/
+
 /* Button direct Plans */
 a:link, a:visited {
     background-color: var(--myPurpleShadow);
@@ -23,6 +42,7 @@ a:link, a:visited {
   a:hover, a:active {
     background-color: var(--myPurple);
   }
+
 
 
   /* Columns Plans */
@@ -82,7 +102,7 @@ a:link, a:visited {
 }
 
 #imgHeader{
-    width: 90%;
+    width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
