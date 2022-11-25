@@ -2,90 +2,96 @@ body{
     background-repeat: no-repeat;
     background-color: var(--myPurpleShadow);
 }
+.back{
+    background: url(../images/galactic.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10%;
+    height: 40%;
+    width: 100%;
+    color: white;
+    box-shadow: 3px 10px 20px 5px #0F1011;
+    transition: .2s;
+  }
+.userBox{
+    width: 420px; 
+    height: 900px; 
+    margin: 0 auto;
+    margin-top: -6%;
+}
+.userImage{
+    width: 103%; 
+    padding: 10px; 
+    text-align:center;
+    border: 2px solid var(--myYellow); 
+    background: url(../images/Banner2.gif);
+    background-position: 49%;
+}
+.userImage img{
+    width: 30%; 
+}
+
+.userTitle{
+    font: 36px; 
+    color: white; 
+    background: var(--myPurpleShadow); 
+    width: 106.1%; 
+    padding: 5px; 
+    text-align:center; 
+    text-transform: uppercase; 
+    font-weight: bold;
+    border: 2px solid var(--myYellow); 
+}
 
 .userData{
-  background: url(../images/galactic.png);
-  background-position: 50%;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10%;
-  height: 40%;
-  width: 100%;
-  color: white;
-  box-shadow: 3px 10px 20px 5px #0F1011;
-  transition: .2s;
+    font: 16px; 
+    color: white; 
+    border: 10px solid var(--myYellow); 
+    width: 100%; 
+    padding: 10px;
+    background: var(--myPurple);
+    height: 315px; 
+    overflow: auto;
+    background-image: url("../images/galactic.png");
 }
 
-/* Create two equal columns that floats next to each other */
-.columnLeft , .columnRight {
-  float: left;
-  width: 40%;
-  padding: 1%;
-  background-color: #36264f73;
-  border-radius: 5px;
-  margin: 3%;
+.textField{
+    height: 260px; 
+    overflow: auto;
+    text-align: center;
+    margin-top: 2px;
+    padding-top: 4%;
+    background-color: rgba(47, 14, 78, 0.644);
+    border-radius: 15px;
 }
-.columnLeft{
-  border: 1px;
-  border-style: solid;
-  border-color: var(--myYellow);
+.fieldTitle{
+    font: 36px; 
+    color: white; 
+    background: var(--myPurpleShadow); 
+    padding: 5px; 
+    text-align:center; 
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    margin-top: 1px;
+    border: 1px solid;
+    border-color: var(--myYellow);
 }
-.columnRight{
-  border: 1px;
-  border-style: solid;
-  border-color: var(--myYellow);
+#fieldHover {
+    transition: .8s; 
+    height:35px; 
+    overflow:hidden;
 }
-.center{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  background-color: #36264f73;
-  padding: 0.5%;
-  border: 2px;
-  border-style: solid;
-  border-color: var(--myYellow);
-  border-radius: 4px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+#fieldHover:hover {
+    height: 100px;
 }
 
-.field{
-  background-color: #36264f73;
-  /*
-  border: 1px;
-  border-style: solid;
-  border-color: var(--myYellow);
-  border-radius: 5px;
-  */
-  padding: 1%;
-  border-radius: 3px;
-}
-
-
-#nextButton {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1%;
-  border: 1px solid var(--myYellowShadow);
-  background: var(--myYellow);
-  font-size: 18px;
-  color: white;
-  padding: 10px 10px;
-  text-align: center;
-  cursor: pointer;
-  transition: .4s;
-}
-#nextButton:hover {
-    padding: 10px 30px;
-    background: linear-gradient(45deg, rgba(255, 196, 0, 0.877), rgba(248, 111, 31, 0.904));
+.userPayMethod{
+    margin-left: 4.5px;
+    width: 108.5%;
 }

@@ -14,45 +14,90 @@
 </head>
 
     <body>
-        <header>
-            HEADER
-            <div id="plan"></div>
-        </header>
-
+   <div class="back">   
+        <div class="userBox">
+        <div class="userImage">
+            <img src="../images/yellowChar.gif"/>
+        </div>
+        <div class="userTitle">
+            Datos de Usuario 
+        </div>
         <div class="userData">
-            <div class="row">
-                <div class="center">
-                    <h2>Datos de la Cuenta</h2>
-                    <div class="columnLeft">
-                        Nombre: <span class="field" id="name"></span>
-                        <br>
-                        Email: <span class="field" id="email"></span>
-                        <br>
-                        País: <span class="field" id="country"></span>
-                    </div>
-                    <div class="columnRight">
-                        Apellido: <span class="field" id="lastName"></span>
-                        <br>
-                        Número de Teléfono: <span class="field" id="telNumber"></span>
-                        <br>
-                        Ciudad: <span class="field" id="city"></span>
-                    </div>
+            <div id="fieldHover">
+                <div class="fieldTitle">
+                    Nombre
+                </div>
+                <div class="textField">
+                    <span class="field" id="name"></span>
                 </div>
             </div>
-            <div class="center">
-                Dirección: <span class="field" id="address"></span>
-                <h2>Método de Pago</h2>
-                <span id="creditCard">
-                    <span class="field" id="creditCardNumber"></span>
-                </span>
-                <span id="paypal">
-                    <span class="field" id="paypalAccount"></span>
-                </span>
+            <div id="fieldHover">
+                <div class="fieldTitle">
+                    Apellido
+                </div>
+                <div class="textField">
+                    <span class="field" id="lastName"></span>
+                </div>
             </div>
-            <button id="nextButton" alt="Continuar" onclick="">Continuar</button>
+            <div id="fieldHover">
+                <div class="fieldTitle">
+                    Email
+                </div>
+                <div class="textField">
+                    <span class="field" id="email"></span>
+                </div>
+            </div>
+            <div id="fieldHover">
+                <div class="fieldTitle">
+                    Número de Teléfono
+                </div>
+                <div class="textField">
+                    <span class="field" id="telNumber"></span>
+                </div>
+            </div>
+            <div id="fieldHover">
+                <div class="fieldTitle">
+                    País
+                </div>
+                <div class="textField">
+                    <span class="field" id="country"></span>
+                </div>
+            </div>
+            <div id="fieldHover">
+                <div class="fieldTitle">
+                    Ciudad
+                </div>
+                <div class="textField">
+                    <span class="field" id="city"></span>
+                </div>
+            </div>
+            <div id="fieldHover">
+                <div class="fieldTitle">
+                    Dirección
+                </div>
+                <div class="textField">
+                    <span class="field" id="address"></span>
+                </div>
+            </div>
         </div>
-        
-       
+        <div class="userPayMethod">
+            <div id="fieldHover">
+                <div class="fieldTitle">
+                    Método de pago
+                </div>
+                <div class="textField">
+                    <span id="creditCard">
+                        <span class="field" id="creditCardNumber"></span>
+                    </span>
+                    <span id="paypal">
+                        <span class="field" id="paypalAccount"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+
         
 <!--JS Code-->
     <script src="../js/classes.js"></script>
