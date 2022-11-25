@@ -23,5 +23,5 @@ function goToFormulary(){
     //Save plan in Storage and go to form
     sessionStorage.setItem('planSaved',JSON.stringify(plan.getJson()));
     sessionStorage.setItem('typePlan',typePlan);
-    window.location.replace("./html/formulary.html");
+    window.location.replace("../html/formulary.html");
 }
