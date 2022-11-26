@@ -7,12 +7,6 @@
   --myRed: rgb(228, 7, 18);
 }
 
-/*
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}*/
 body{
   background: rgb(0,0,0);
   background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 41%, rgba(54,38,79,1) 100%);

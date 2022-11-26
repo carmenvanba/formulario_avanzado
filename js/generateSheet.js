@@ -25,13 +25,15 @@ document.getElementById("telNumber").innerHTML = accountImport["telNumber"];
 document.getElementById("country").innerHTML = accountImport["country"];
 document.getElementById("city").innerHTML = accountImport["city"];
 document.getElementById("address").innerHTML = accountImport["adress"];
-if(accountImport["creditCardNumber"] != null){
-    document.getElementById("creditCardNumber").innerHTML = accountImport["creditCardNumber"];
-    document.getElementById("paypalAccount").style.display= "none";
-}else{
-    document.getElementById("paypalAccount").innerHTML = accountImport["paypalAccount"];
+
+
+if((/[\w\.-]+@[\w\.-]+\.\w{2,4}/.test(accountImport["paypalAccount"]))){
     document.getElementById("creditCardNumber").style.display= "none";
-}//FinSi
+    document.getElementById("paypalAccount").innerHTML = accountImport["paypalAccount"];
+}else{
+    document.getElementById("paypalAccount").style.display= "none";
+    document.getElementById("creditCardNumber").innerHTML = accountImport["creditCardNumber"];
+}//FIn Si
 
 
 function goToProfile(){

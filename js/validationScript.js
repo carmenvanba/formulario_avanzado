@@ -383,14 +383,45 @@ function expireDate() {
     return validated;
 }//Fin expireDate Validation
 
+
+//paypal Validation
+//paypal Validation
+function paypalValidation() {
+    var paypalAccount = document.getElementById("paypalAccount");
+    var issueArr = [];
+    var validated = false;
+    //reset error   
+    paypalAccount.setCustomValidity("");
+    paypalAccount.style.borderColor = defaultInput;
+
+    if(document.getElementById("paypalAccount").value.length==0){
+        paypalAccount.style.borderColor = alertRedInput;
+    }else{
+        if(!(/[\w\.-]+@[\w\.-]+\.\w{2,4}/.test(paypalAccount.value))){
+            issueArr.push("La dirección de correo electrónico debe cumplir el siguiente formato: ejemplo@email.com");
+        }//Fin Si
+        if (issueArr.length > 0) {
+            paypalAccount.setCustomValidity(issueArr.join("\n"));
+            paypalAccount.style.borderColor = alertRedInput;
+            paypalAccount.reportValidity();
+        } else {
+            validated = true;
+        }//Fin Si
+    }//Fin Si
+    return validated;
+}//Fin paypal Validation
+
+
+
 function validateStep3(){
-    var validated = creditCardNumberValidation() && cvcValidation() && expireDate();
+    var validated = creditCardNumberValidation() && cvcValidation() && expireDate() ||
+    paypalValidation();
     if(validated){
         //Save the data
         account.setCreditCardNumber(document.getElementById("creditCardNumber").value);
         account.setCreditCardCvc(document.getElementById("cvc").value);
         account.setCreditCardExpireDate(document.getElementById("expireDate").value);
-        //account.setPaypalAccount(document.getElementById("paypalAccount").value);
+        account.setPaypalAccount(document.getElementById("paypalAccount").value);
         //Go to the next step
         goToStep4();
         document.getElementById("characterProgress3").style.display = "none"

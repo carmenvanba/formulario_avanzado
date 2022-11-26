@@ -77,7 +77,6 @@
 
                             <span class="showPassword">
                                 <img class="eyeImage" type="image" src="../images/eyeIcon.png" onclick="return showPassword()"/>
-                                <!--<input type="checkbox" onclick="showPassword()">-->
                             </span>
                         </li>
                         <li>
@@ -162,7 +161,7 @@
                             <br>
                             <li>
                                 Número de Tarjeta<br>
-                                <input type="text" class="inputFields" id="creditCardNumber" placeholder="1234 1234 1234" value="1234 1234 1234" 
+                                <input type="text" class="inputFields" id="creditCardNumber" placeholder="1234 1234 1234" value="" 
                                     oninput="return creditCardNumberValidation()" required/>
                             </li>
                             <li>
@@ -177,7 +176,14 @@
                             </li>
                         </span>
 
-                        <span id="paypalPayment"><br>Aquí iría el redireccionamiento a la conexión con paypal</span>
+                        <span id="paypalPayment">
+                            <br>
+                            <li>
+                                Cuenta de Paypal<br>
+                                <input type="text" class="inputFields" id="paypalAccount" placeholder="email" value="" 
+                                    oninput="return paypalValidation()" required/>
+                            </li>
+                        </span>
                         
                         <li id="centerButton">
                             <button class="nextButton" name="nextButton" alt="Continuar" onclick="validateStep3()">Continuar</button>
