@@ -106,7 +106,6 @@ function Account(){
 //User Profile
 function Profile(){
     //Atributes
-    this.icon;
     this.nick;
     this.pronouns;
     this.role;
@@ -114,9 +113,6 @@ function Profile(){
 
     //Methods
     //Getters
-    this.getIcon = function() {
-        return this.icon;
-    }
     this.getNick = function() {
         return this.nick;
     }
@@ -131,7 +127,6 @@ function Profile(){
     }
     this.getJson = function(){
         var profileJson = {
-            icon: this.icon,
             nick: this.nick,
             pronouns: this.pronouns,
             role: this.role,
@@ -141,9 +136,6 @@ function Profile(){
     }//Fin Json
 
     //Setters
-    this.setIcon = function(icon) {
-        this.icon = "../images/"+icon+".jpg";
-    }
     this.setNick = function(nick) {
         this.nick = nick;
     }

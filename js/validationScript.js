@@ -431,9 +431,9 @@ function validateStep4(){
         //Save the data
         profile.setNick(document.getElementById("nickName").value);
         profile.setBio(document.getElementById("bio").value);
-        profile.setPronouns(document.getElementsByName("pronouns").value);
-        profile.setRole(document.getElementsByName("player").value);
-        
+        profile.setPronouns($('[name="pronouns"]:checked').val());
+        profile.setRole($('[name="player"]:checked').val());
+
         //Save objects account and profile in sessionstorage
         sessionStorage.setItem('accountSaved',JSON.stringify(account.getJson()));
         sessionStorage.setItem('profileSaved',JSON.stringify(profile.getJson()));

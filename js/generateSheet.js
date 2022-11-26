@@ -32,3 +32,8 @@ if(accountImport["creditCardNumber"] != null){
     document.getElementById("paypalAccount").innerHTML = accountImport["paypalAccount"];
     document.getElementById("creditCardNumber").style.display= "none";
 }//FinSi
+
+
+function goToProfile(){
+    window.location.replace("../html/userProfile.html");
+}
