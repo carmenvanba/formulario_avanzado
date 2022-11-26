@@ -1,4 +1,120 @@
 body{
-  background-repeat: no-repeat;
-  background-color: var(--myPurpleShadow);
+  text-shadow: 2px 0 rgb(0, 0, 0), -2px 0 rgb(0, 0, 0), 
+  0 2px rgb(0, 0, 0), 0 -2px rgb(0, 0, 0),
+  1px 1px rgb(0, 0, 0), -1px -1px rgb(0, 0, 0), 
+  1px -1px rgb(0, 0, 0), -1px 1px rgb(0, 0, 0);
+  font-size: 16px;
 }
+h2{
+  color: var(--myYellow);
+}
+
+h4{
+  text-align: center;
+}
+h3, h1 {
+  position:relative; font-size:20px; 
+  font-weight:700;  letter-spacing:0px; 
+  text-transform:uppercase; width:250px; 
+  text-align:center; margin:auto; 
+  white-space:nowrap; 
+  border:2px solid rgb(255, 255, 255);
+  padding:5px 11px 3px 11px;
+}
+h3:before, h3:after {
+    background-color: #ffffff;
+    position:absolute; 
+    content: '';
+    height: 7px;
+    width: 7px; border-radius:50%;
+    bottom: 12px;
+}
+h3:before {
+   left:-20px;
+}
+h3:after {
+   right:-20px;
+}
+
+/* Create two equal columns that floats next to each other */
+.columnLeft , .columnRight {
+  float: left;
+  width: 40%;
+  padding: 1%;
+  border-radius: 5px;
+  margin: 3%;  background-image: url("../images/galactic3.png");
+}
+.columnLeft{
+  border: 1px;
+  border-style: solid;
+  border-color: white;
+}
+.columnRight{
+  border: 1px;
+  border-style: solid;
+  border-color: white;
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 0.5%;
+  border-radius: 4px;  background-image: url("../images/galactic3.png");
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.content{
+  margin-top: 1%;
+  display: block;
+  margin-left: 23%;
+  margin-right: auto;
+  width: 60%;
+}
+
+.plansContent{
+  background-image: url("../images/galactic3.png");
+  padding: 1%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.836) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+/* Create three equal columns that floats next to each other */
+.columnProfileContent {
+  float: left;
+  width: 30%;
+  padding:5px;
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: rgba(0, 0, 0, 0.836) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+img {
+  --s: 250px;   /* the size of the image */
+  --b: 8px;     /* the border thickness*/
+  --g: px;    /* the gap */
+  --c: #ffffff; /* the color */
+  
+  width: var(--s);
+  outline: calc(var(--s)/2) solid rgba(49, 15, 42, 0.219);
+  outline-offset: calc(var(--s)/-2);
+  cursor: pointer;
+  transition: 0.3s;
+}
+img:hover {
+  outline: var(--b) solid var(--c);
+  outline-offset: var(--g);
+}
+
+
+

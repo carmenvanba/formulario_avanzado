@@ -206,12 +206,8 @@ input[type="radio"]{
 .progress .circle,
 .progress .bar {
   display: inline-block;
-    /* background: #fff; */
     width: 40px;
     height: 40px;
-    /* border-radius: 40px; */
-    /* border: 1px solid #d5d5da; */
-    /* box-shadow: 1px 5px 10px 1px #0f1011;*/
 }
 .progress .bar {
   position: relative;
