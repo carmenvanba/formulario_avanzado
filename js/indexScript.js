@@ -1,4 +1,6 @@
-var typePLan;
+//Variables
+var typePlan;
+
 //Plan creation
 function planHero() {
     typePlan = "Hero";

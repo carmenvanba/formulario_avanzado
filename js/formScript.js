@@ -5,11 +5,11 @@ var profile;
 //Import Plan from Storage
 var planImport = JSON.parse(sessionStorage.getItem('planSaved'));
 if(sessionStorage.getItem('typePlan')=="Hero"){
-    plan = new Hero();
+    //plan = new Hero();
 }else if(sessionStorage.getItem('typePlan')=="Master"){
-    plan = new Wizard();
+    //plan = new Wizard();
 }else{
-    plan = new Legend();
+    //plan = new Legend();
 }//Fin Si
 
 //Show plan character
