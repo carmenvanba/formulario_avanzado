@@ -1,20 +1,14 @@
 //Variables
-var plan;
 var typePlan;
 var profile;
 //Import Plan from Storage
-var planImport = JSON.parse(sessionStorage.getItem('planSaved'));
-if(sessionStorage.getItem('typePlan')=="Hero"){
-    //plan = new Hero();
-}else if(sessionStorage.getItem('typePlan')=="Master"){
-    //plan = new Wizard();
-}else{
-    //plan = new Legend();
-}//Fin Si
+var character = getCharacter(sessionStorage.getItem('typePlan'));
 
-//Show plan character
-    //document.getElementById("espacio1").textContent = plan.getImage();
-    //document.getElementById("espacio2").innerHTML = "La imagen: "+plan.getImage();
+var characterArray=document.getElementsByClassName("character");
+for(var i=0; i<characterArray.length;i++){
+    characterArray[i].src =character;
+}
+
 
 
 
@@ -49,7 +43,6 @@ function paypalPayment(){
 
 
 /* Progress bar */
-console.log("dasdadasdadasdsadd");
 $('.progress .circle').removeClass().addClass('circle');
 $('.progress .bar').removeClass().addClass('bar');
 function progressBarr (i){
@@ -68,5 +61,5 @@ function progressBarr (i){
 
         $('.progress .bar:nth-of-type(' + (i-2) + ')').removeClass('active').addClass('done');
 
-    }
+    }//Fin Si
 }

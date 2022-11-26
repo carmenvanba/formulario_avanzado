@@ -4,7 +4,8 @@ body{
 }
 
 .back{
-    background: url(../images/galactic.png);
+    background: url(../images/galactic2.png);
+    background-size: 90%;
     background-position: 50%;
     background-repeat: no-repeat;
     position: absolute;
@@ -28,9 +29,9 @@ body{
     width: 103%; 
     padding: 10px; 
     text-align:center;
-    border: 2px solid var(--myYellow); 
+    border: 2px solid var(--myPurple); 
     background: url(../images/Banner2.gif);
-    background-position: 5% 85%; 
+    background-position: 93% 80%; 
     background-size: 270%;
 }
 .userImage img{
@@ -46,19 +47,19 @@ body{
     text-align:center; 
     text-transform: uppercase; 
     font-weight: bold;
-    border: 2px solid var(--myYellow); 
+    border: 2px solid var(--myPurple); 
 }
 
 .userData{
     font: 16px; 
     color: white; 
-    border: 10px solid var(--myYellow); 
+    border: 10px solid var(--myPurple); 
     width: 100%; 
     padding: 10px;
     background: var(--myPurple);
     height: 315px; 
     overflow: auto;
-    background-image: url("../images/galactic.png");
+    background-image: url("../images/galactic2.png");
 }
 
 .textField{
@@ -80,7 +81,7 @@ body{
     margin-bottom: 5px;
     margin-top: 1px;
     border: 1px solid;
-    border-color: var(--myYellow);
+    border-color: var(--myPurple);
 }
 #fieldHover {
     height:100px; 

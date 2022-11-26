@@ -1,12 +1,20 @@
 //Variables
-var plan;
+var typePlan;
 
 //Import Account from Storage
 var accountImport = JSON.parse(sessionStorage.getItem('accountSaved'));
 
 //Import Plan from Storage
-plan = sessionStorage.getItem('typePlan');
+typePlan = sessionStorage.getItem('typePlan');
 //Change skin 
+//Character
+document.getElementById("character").src=getCharacter(typePlan);
+//Colors
+if(typePlan == "Master"){
+    document.querySelector("link[href='../css/heroPlanStyle.css']").href = "../css/masterPlanStyle.css";
+}else if(typePlan == "Legend"){
+    document.querySelector("link[href='../css/heroPlanStyle.css']").href = "../css/legendPlanStyle.css";
+}//Fin Si
 
 
 
