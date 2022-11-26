@@ -1,4 +1,5 @@
 //Classes
+/*
 //Hero
 function Hero(){
     //Atributes
@@ -44,7 +45,7 @@ function Legend(){
     this.precio = 8.99;
     this.color = "#511e9f";
 }//Fin Wizard
-
+*/
 
 //User Account
 function Account(){

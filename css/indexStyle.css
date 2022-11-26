@@ -1,3 +1,8 @@
+body{
+  background-image: url("../images/galactic3.png");
+  background-size: 100% 200%;
+}
+
 /* Titles and texts */
 h1{
   padding: 10%;
@@ -6,11 +11,14 @@ h2{
     text-align: center;
     text-transform: uppercase;
     font-size: 40px;
+    text-shadow: 5px 5px #000000;
+    margin-top: 5%;
+    margin-bottom: 0.5%;
 }
 
 /* Header */
 header{
-  background-image: url(../images/header.jpg);
+  background-image: url(../images/header.png);
   height: 100%;
 }
 #logo{
@@ -27,7 +35,7 @@ header{
   left: 16px;
   width: 50%;
   padding: 1%;
-  background-color: #2c182e7e;
+  background-color: #2e18187e;
   border-radius: 5px;
   margin-left: 23%;
   font-size: 19px;
@@ -42,7 +50,7 @@ header{
 .columnHeader {
   float: left;
   width: 10%;
-  background-color: #2c182e7e;
+  background-color: #2e18187e;
   padding: 1%;
   margin-top: 1%;
   margin-left: 3.5%;
@@ -52,7 +60,8 @@ header{
 
 
 .buttonPlans{
-  transform: translate(551%, -10%);
+  margin-left: 43.6%;
+  margin-top: 2%;
   margin-bottom: 1%;
   text-transform: uppercase;
   font-weight: bold;
@@ -84,26 +93,28 @@ a:link, a:visited {
 } 
 .column {
     float: left;
+    border-radius: 5px;
     width: 25%;
     padding: 5px;
     margin-left: 5%;
     margin-right: 1%;
-    background-color: white;
+    background-color: rgba(92, 41, 75, 0.473);
     color: black;
     box-shadow: rgba(0, 0, 0, 0.836) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  }
-  .columnTitle{
     color: white;
-    font-size: 36px;
-  }
+}
+ 
   #columnTitle1{
-    background-color: var(--myYellow);
+    border: solid 5px var(--myYellow);
+    background-color: rgba(75, 41, 9, 0.473);
   }
   #columnTitle2{
-    background-color: var(--myRed);
+    border: solid 5px var(--myRed);
+    background-color: rgba(75, 9, 9, 0.473);
   }
   #columnTitle3{
-    background-color: var(--myPurple);
+    border: solid 5px var(--myPurple);
+    background-color: rgba(54, 9, 75, 0.473);
   }
 
   /* Columns Content */
@@ -112,13 +123,25 @@ a:link, a:visited {
     display: flex;
     justify-content: center;
 } 
-.columnContent {
+.columnContent{
     float: left;
     width: 25%;
     padding: 10px;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+    background-color:rgba(25, 9, 51, 0.342);
   }
+
+  #blocked img{
+    filter: grayscale(100%);
+    filter: blur(3px);
+  }
+  
+  #blocked p{
+    color: rgb(32, 23, 48);
+  }
+
 
 /* Clear floats after the columns */
     .row:after {
@@ -130,7 +153,6 @@ a:link, a:visited {
 /* Images */
 #character{
     width: 18%;
-    background-color: white;
 }
 
 #imgHeader{
@@ -144,9 +166,13 @@ a:link, a:visited {
  width: 100%;
 }
 #imgContent:hover {
-    opacity: 10%;
+    opacity: 80%;
+    transition-duration: 1s;
   }
 
+  #imgPlan{
+    width: 80%;
+  }
 
 
 /* Different Plan Buttons */
@@ -162,6 +188,7 @@ a:link, a:visited {
     text-align: center;
     cursor: pointer;
     transition: .4s;
+    box-shadow: rgba(0, 0, 0, 0.836) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
   #planButton:hover {
       padding: 10px 30px;
