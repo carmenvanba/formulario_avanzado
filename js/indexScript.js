@@ -18,5 +18,5 @@ function planLegend() {
 function goToFormulary(){
     //Save plan in Storage and go to form
     sessionStorage.setItem('typePlan',typePlan);
-    window.location.replace("../html/formulary.html");
+    window.location.replace("./html/formulary.html");
 }
